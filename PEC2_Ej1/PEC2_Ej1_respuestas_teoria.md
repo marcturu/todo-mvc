@@ -1,4 +1,5 @@
 ## 0. Property 'charAt' does not exist on type 'number' - ts(2339)
+
 ![Error ts(2339)](Error_ts(2339).png)  
 
 ### Explicación
@@ -81,3 +82,8 @@ let m = l * 2; // Error TS2571: Object is of type 'unknown'.
 ```
 El tipo `unknown` acepta cualquier valor en la asignación (como `any`), pero si antes de hacer una comprobación de su tipo se intenta realizar una operación, se muestra este error. Debido a que se intenta realizar la operación `l * 2` sin antes comprobar que `l` efectivamente es un `number`, ocurre esta situación.  
 Es por eso que aparece el código de error **ts(2571)**.
+
+## 3. (0,5 puntos) ¿Cuál es la diferencia entre una clase y una interface en TypeScript?
+
+La diferencia principal es que las interfaces simplemente definen la estructura de un objeto y sus tipados, y por otro lado, las clases no solo definen esta estructura, sinó que también lo hacen con el comportamiento y la implementación, existiendo en tiempo de ejecución para utilizar estos objetos definidos.  
+Es decir, las clases no solamente representan las reglas que definen un objeto, sino que sirven para crear objetos con implementación (propiedades y métodos).
