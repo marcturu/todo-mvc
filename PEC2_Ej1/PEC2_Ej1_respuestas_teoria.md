@@ -51,3 +51,33 @@ const g = [3];
 const h = null;
 ```
 **null**, ya que no tiene ningún tipo más específico.
+
+## 2. (1 punto) ¿Por qué se dispara cada uno de los errores del fichero code3.ts?
+
+```ts
+const i: 3 = 3;
+i = 4; // Error TS2588 : Cannot assign to 'i' because it is a constant.ts(2588)
+```
+Tal y como dice la propia descipción, al declarar `i` como una constante, no se puede modificar su valor.  
+Es por eso que aparece el código de error **ts(2588)**.
+
+```ts
+const j = [1, 2, 3];
+j.push(4);
+j.push('5'); // Error TS2345: Argument of type '"5"' is not assignable to parameter of type 'number'.
+```
+Debido a que la variable `j` fue inferida como un `array` de `numbers` (`number[]`) por TypeScript, muestra un error al intentar añadir un `string` (que no un `number`, como pasa con la línea anterior).  
+Es por esto que aparece el código de error **ts(2345)**.  
+
+```ts
+let k: never = 4; // Error TSTS2322: Type '4' is not assignable to type 'never'.
+```
+Lo que sucede en este apartado es que `never`, al ser un tipo de dato reservado para utilidades como funciones que no esperan devolver nada, cuando se le intenta asignar un número, muestra el error, ya que `never` representa un *bottom type* y no se le puede asignar ningún valor.  
+Es por eso que aparece el código de error **ts(2322)**.
+
+```ts
+let l: unknown = 4;
+let m = l * 2; // Error TS2571: Object is of type 'unknown'.
+```
+El tipo `unknown` acepta cualquier valor en la asignación (como `any`), pero si antes de hacer una comprobación de su tipo se intenta realizar una operación, se muestra este error. Debido a que se intenta realizar la operación `l * 2` sin antes comprobar que `l` efectivamente es un `number`, ocurre esta situación.  
+Es por eso que aparece el código de error **ts(2571)**.
