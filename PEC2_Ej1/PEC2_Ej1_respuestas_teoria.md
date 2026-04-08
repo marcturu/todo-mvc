@@ -1,4 +1,4 @@
-## 0. Property 'charAt' does not exist on type 'number' - ts(2339)
+## 0. (0,5 puntos) Property 'charAt' does not exist on type 'number' - ts(2339)
 
 ![Error ts(2339)](Error_ts(2339).png)  
 
