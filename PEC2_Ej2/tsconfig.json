@@ -1,0 +1,72 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+
+    /* 
+      Versión de JavaScript a la que compilará el código TypeScript.
+      "es2015" (ES6) habilita: let/const (en vez de var), arrow functions, 
+      clases, Promises, template literals,... a diferencia de la práctica 
+      anterior, que usaba ES5.
+    */
+    "target": "es2015", 
+
+    /*
+      Módulo de JavaScript a usar en la salida. 
+      "commonjs" es el sistema de módulos usado por Node.js, el cual permite 
+      usar require() / module.exports para importar/exportar módulos.
+      Otras posibles opciones son "esnext" (para usar la sintaxis de módulos ES6), 
+      "amd" y "system" (entre otros).
+    */
+    "module": "commonjs", 
+
+    /*
+      Especifica el directorio destino donde TypeScript colocará los archivos 
+      JavaScript (.js) compilados. Mantiene el código fuente TypeScript (.ts) 
+      separado de los archivos JavaScript (.js) generados, lo que ayuda a organizar 
+      el proyecto y evita confusiones entre los archivos fuente y los compilados.
+    */
+    "outDir": "./dist",  
+    
+    /*
+      Especifica el directorio raíz de los archivos fuente TypeScript (.ts) del 
+      proyecto. Esto ayuda por un lado a TypeScript a resolver las rutas de los 
+      archivos fuente, y por otro a reproducir la misma estructura de directorios 
+      en el de salida (outDir).
+    */
+    "rootDir": "./src", 
+
+    /*
+      Equivale a habilitar todas estas opciones de verificación estricta: 
+      - strictBindCallApply: verifica las llamadas a funciones con bind, call y 
+      apply para comprobar si tienen el tipado correcto.
+      - strictFunctionTypes: verifica que los tipos de funciones sean compatibles 
+      al utilizar funciones.
+      - strictPropertyInitialization: verifica que las propiedades de clase sean 
+      inicializadas en el constructor o declaradas con un valor predeterminado.
+      - strictNullChecks: verifica que null/undefined no se puedan asignar a tipos.
+      - noImplicitAny: verifica que las variables y argumentos tengan un tipo 
+      explícito, evitando el uso de 'any' implícito.
+      - noImplicitThis: verifica que el valor de 'this' en las funciones sea del 
+      tipo esperado.
+      - alwaysStrict: habilita el modo estricto ("use strict" en todos los archivos JS), 
+      lo que puede ayudar a detectar errores comunes y mejorar la seguridad del código.
+      - forceConsistentCasingInFileNames: verifica que los nombres de los archivos sean 
+      consistentes en cuanto a mayúsculas y minúsculas, lo que ayuda a evitar problemas 
+      de compatibilidad entre sistemas de archivos que son sensibles a esas diferencias. 
+    */
+    "strict": true,
+
+    /*
+      Habilita la compilación incremental, lo que permite a TypeScript almacenar 
+      información de compilación antigua y solo recompila los archivos que han cambiado 
+      desde la última compilación. Esto puede mejorar significativamente los tiempos de 
+      compilación en algunos proyectos, ya que evita recompilar todo el proyecto cada vez.
+    */
+    "incremental": true,
+    
+    /*
+      Especifica la ubicación del archivo de información de compilación incremental.
+    */
+    "tsBuildInfoFile": "./buildcache",
+  }
+}
