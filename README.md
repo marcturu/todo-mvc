@@ -23,6 +23,8 @@ Se ha trabajado con ramas Git a pesar de ser un proyecto individual, con el obje
 ### PEC2_Ej1 - Primeros códigos
 
 ### PEC2_Ej2
+
+#### **b) ejercicio1.txt**
 En esta parte:
 ```ts
 let array:number[]=[2,3,4];
