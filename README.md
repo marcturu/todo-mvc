@@ -24,6 +24,9 @@ Se ha trabajado con ramas Git a pesar de ser un proyecto individual, con el obje
 
 ### PEC2_Ej2
 
+#### **a) tsconfig.json**
+Nigúna aclaración a destacar.
+
 #### **b) ejercicio1.txt**
 En esta parte:
 ```ts
@@ -57,6 +60,12 @@ Aquí, se decidió crear un *index signature* para definir el tipo de objeto par
 Despúes, simplemente se recorrieron los dos elementos de `myHangar` y se mostraron con la estructura indicada en el comentario.
 
 ![Ejecución consola del resultado c](Result_PEC2_Ej2c.png)
+
+#### **d) ejercicio3.txt**
+La línea `Animal.population++` en el constructor de la superclase se ejecuta cada vez que se instancia cualquier subclase (`super()` presente en las constructoras de las subclases).  
+En el bucle, por un lado se reutiliza la función `sound()` para las dos subclases, pero por otro lado, se necesita recurrir a un condicional para diferenciar qué función utilizar dependiendo de la tipología de la instancia de Animal (`instanceof`). 
+
+![Ejecución consola del resultado d](Result_PEC2_Ej2d.png)
 
 ### PEC2_Ej3 - Aplicación TODO
 
