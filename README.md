@@ -20,11 +20,37 @@ Se ha trabajado con ramas Git a pesar de ser un proyecto individual, con el obje
 
 ## Ejercicios
 
-### PEC1_Ej2_1 - Formulario con validación
+### PEC2_Ej1 - Primeros códigos
 
-### PEC1_Ej2_2 - Calculadora de tipo de cambio
+### PEC2_Ej2
+En esta parte:
+```ts
+let array:number[]=[2,3,4];
+console.log(array.shift()); //2
+printArray(array); // 3,4
+```
+debido a que se espera `3` y `4` solamente después, no se puede hacer 
+```ts
+console.log(array[0]); //2
+```
+, ya que no se eliminaría el `2`. 
 
-### PEC1_Ej2_3 - Reserva de asientos
+Aquí:
+```ts
+console.log(array.sort().join(',')); //1,3,4,8
+console.log(array.reverse().join(',')); //8,4,3,1
+```
+se añadieron los `.join(',')` (aparte del `reverse()` que faltaba) para que las salidas coincidieran, ya que `console.log()` imprime los arrays diferentes.  
+También se podría haber hecho:
+```ts
+printArray(array.sort());
+printArray(array.reverse());
+```
+pero se quiso cambiar lo mínimo posible el código no indicado con /**/.
+
+![Ejecución consola del resultado](Result_PEC2_Ej2b.png)
+
+### PEC2_Ej3 - Aplicación TODO
 
 ### Hotfixes
 Rama dedicada a correcciones menores transversales: variables globales, diseño responsive, comentarios en el código y mejoras de UI.
