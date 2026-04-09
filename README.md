@@ -50,7 +50,13 @@ printArray(array.reverse());
 ```
 pero se quiso cambiar lo mínimo posible el código no indicado con /**/.
 
-![Ejecución consola del resultado](Result_PEC2_Ej2b.png)
+![Ejecución consola del resultado b](Result_PEC2_Ej2b.png)
+
+#### **c) ejercicio2.txt**
+Aquí, se decidió crear un *index signature* para definir el tipo de objeto para tipar el diccionario.  
+Despúes, simplemente se recorrieron los dos elementos de `myHangar` y se mostraron con la estructura indicada en el comentario.
+
+![Ejecución consola del resultado c](Result_PEC2_Ej2c.png)
 
 ### PEC2_Ej3 - Aplicación TODO
 
