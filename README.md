@@ -69,6 +69,40 @@ En el bucle, por un lado se reutiliza la función `sound()` para las dos subclas
 
 ### PEC2_Ej3 - Aplicación TODO
 
+En **`todo.service.ts`** se planteó usar:
+```ts
+export interface ITodoService {
+  todos: ITodo[];
+  onTodoListChanged: (todos: ITodo[]) => void;
+}
+```
+pero debido a que en la clase `TodoService` las propiedades eran `private`, había incosnsistencia en la declaraicón de la interfaz y la clase, por lo que se optó por renunciar al uso de esta primera.
+
+En la siguiente función (ya adaptada) de **`todo.views.ts`**:
+```ts
+getElement(selector: string): HTMLElement {
+  const element = document.querySelector<HTMLElement>(selector);
+  if (!element) throw new Error(`Element ${selector} not found`);
+  return element;
+}
+```
+se usó `HTMLElement` en el `querySelector` para indicar a TypeScript el tipo esperado del elemento seleccionado, permitiendo acceder a sus propiedades. Además se añadió la comprobación condicional porque `querySelector` puede devolver `null`, valor no compatible con el tipo de retorno de `HTMLElement`.
+
+En la función `displayTodos(todos: ITodo[]): void` de **`todo.views.ts`**, para solucionar el error *"Property 'type' does not exist on type 'HTMLElement'"* que aparecía en las siguientes líneas (sin adaptar aún):
+```ts
+const checkbox = this.createElement("input");
+  checkbox.type = "checkbox";
+  checkbox.checked = todo.complete;
+```
+se agregó `as HTMLInputElement` porque `createElement` devuelve un `HTMLElement`, que no incluye propiedades específicas como `type` y `checked` propias de `HTMLInputElement`.    
+También se transformó a `'true'` la línea:
+```ts
+span.contentEditable = true;
+```
+ya que `contentEditable` está definida como `string` en el DOM Typescript.
+
+Como último cambio importante a comentar, todas los callbacks de eventos se tiparon como `event: Event` y se añadió `const target = event.target as HTMLElement;` antes de la comprobación condicional para solucioanr el error *"'event.target' is possibly 'null'"*, ya que su tipo es `EventTarget | null` y TypeScript no puede saber que sea un `HTMLElement` sin esta conversión.
+
 ### Hotfixes
 Rama dedicada a correcciones menores transversales: variables globales, diseño responsive, comentarios en el código y mejoras de UI.
 
