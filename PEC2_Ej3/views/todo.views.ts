@@ -5,7 +5,7 @@ import { ITodo } from "../models/todo.model";
  *
  * Visual representation of the model.
  */
-class TodoView {
+export class TodoView {
   private app: HTMLElement;
   private form: HTMLElement;
   private input: HTMLInputElement;

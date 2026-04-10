@@ -103,6 +103,18 @@ ya que `contentEditable` está definida como `string` en el DOM Typescript.
 
 Como último cambio importante a comentar, todas los callbacks de eventos se tiparon como `event: Event` y se añadió `const target = event.target as HTMLElement;` antes de la comprobación condicional para solucioanr el error *"'event.target' is possibly 'null'"*, ya que su tipo es `EventTarget | null` y TypeScript no puede saber que sea un `HTMLElement` sin esta conversión.
 
+En `todo.controller.ts` surgió el problema de que no se podía acceder al atributo privado `todos`, específicamente en la siguiente línea:
+```ts
+this.onTodoListChanged(this.service.todos);
+```
+debido a que, como se comentó al principio, en la clase `TodoService` las propiedades eran `private`. Para solucionarlo, se renombró el atributo de esa clase como `_todos` y se creó un *getter* para poder acceder a dicho atributo:
+```ts
+get todos(): ITodo[] {
+  return [...this._todos];
+}
+```
+Además de substituir las declaraciónes donde aparecía dicho atributo con la nueva convención **'_'**.
+
 ### Hotfixes
 Rama dedicada a correcciones menores transversales: variables globales, diseño responsive, comentarios en el código y mejoras de UI.
 

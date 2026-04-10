@@ -6,13 +6,17 @@ import { ITodo, ITodoConstructor, Todo } from "../models/todo.model";
  */
 
 export class TodoService {
-  private todos: ITodo[];
+  private _todos: ITodo[];
   private onTodoListChanged: (todos: ITodo[]) => void = () => {};
   constructor() {
     const stored = localStorage.getItem('todos');
-    this.todos = (JSON.parse(stored || '[]') as ITodoConstructor[]).map(
+    this._todos = (JSON.parse(stored || '[]') as ITodoConstructor[]).map(
       todo => new Todo(todo)
     );
+  }
+
+  get todos(): ITodo[] {
+    return [...this._todos];
   }
 
   bindTodoListChanged(callback: (todos: ITodo[]) => void): void {
@@ -25,13 +29,13 @@ export class TodoService {
   }
 
   addTodo(text: string): void {
-    this.todos.push(new Todo({ text }));
+    this._todos.push(new Todo({ text }));
 
-    this._commit(this.todos);
+    this._commit(this._todos);
   }
 
   editTodo(id: string, updatedText: string): void {
-    this.todos = this.todos.map(todo =>
+    this._todos = this._todos.map(todo =>
       todo.id === id
         ? new Todo({
             ...todo,
@@ -40,20 +44,20 @@ export class TodoService {
         : todo
     );
 
-    this._commit(this.todos);
+    this._commit(this._todos);
   }
 
   deleteTodo(_id: string): void {
-    this.todos = this.todos.filter(({ id }) => id !== _id);
+    this._todos = this._todos.filter(({ id }) => id !== _id);
 
-    this._commit(this.todos);
+    this._commit(this._todos);
   }
 
   toggleTodo(_id: string): void {
-    this.todos = this.todos.map(todo =>
+    this._todos = this._todos.map(todo =>
       todo.id === _id ? new Todo({ ...todo, complete: !todo.complete }) : todo
     );
 
-    this._commit(this.todos);
+    this._commit(this._todos);
   }
 }
