@@ -62,25 +62,30 @@ printArray(array.reverse());
 ```
 pero se quiso cambiar lo mínimo posible el código no indicado con /**/.
 
-![Ejecución consola del resultado b](Result_PEC2_Ej2b.png)
+![Ejecución consola del resultado b](PEC2_Ej2/img/Result_PEC2_Ej2b.png)
 
 #### **c) ejercicio2.txt**
 Aquí, se decidió crear un *index signature* para definir el tipo de objeto para tipar el diccionario.  
 Despúes, simplemente se recorrieron los dos elementos de `myHangar` y se mostraron con la estructura indicada en el comentario.
 
-![Ejecución consola del resultado c](Result_PEC2_Ej2c.png)
+![Ejecución consola del resultado c](PEC2_Ej2/img/Result_PEC2_Ej2c.png)
 
 #### **d) ejercicio3.txt**
 La línea `Animal.population++` en el constructor de la superclase se ejecuta cada vez que se instancia cualquier subclase (`super()` presente en las constructoras de las subclases).  
 En el bucle, por un lado se reutiliza la función `sound()` para las dos subclases, pero por otro lado, se necesita recurrir a un condicional para diferenciar qué función utilizar dependiendo de la tipología de la instancia de Animal (`instanceof`). 
 
-![Ejecución consola del resultado d](Result_PEC2_Ej2d.png)
+![Ejecución consola del resultado d](PEC2_Ej2/img/Result_PEC2_Ej2d.png)
 
 ### 3️⃣ PEC2_Ej3 - Aplicación TODO
 
 Guía completa en [README_PEC2_Ej3.md](PEC2_Ej3/README_PEC2_Ej3.md).
 
 #### **Ejecución:** (recomendada con Webpack)
+
+Instalar dependencias:
+```bash
+npm install
+```
 
 Para desarrollo:
 ```bash

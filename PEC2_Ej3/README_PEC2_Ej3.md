@@ -25,6 +25,9 @@ PEC2_Ej3/
 │  ├─ bundle.js  
 │  ├─ index.html  
 │  └─ style.css  
+├─ img/  
+│  ├─ npmrunbuild.png 
+│  └─ npmrunbuilddev.png
 ├─ style.css  
 ├─ tsconfig.json  
 ├─ webpack.config.js  
@@ -58,11 +61,16 @@ Webpack transpila todos los archivos TypeScript y genera un único fichero `bund
 ```bash
 npm run build:dev
 ```
+![npm run build:dev](img/npmrunbuilddev.png)
 
 ### Build de producción
 ```bash
 npm run build
 ```
+![npm run build](img/npmrunbuild.png)
+
+La diferencia entre estas dos maneras de ejecutar el proyecto es cómo Webpack genera los archivos finales.  
+Con `npm run build:dev`, los archivos generados tienen una estructura más legible, no están optimizados y ocupan más líneas y espacio, a diferencia de los generados con el comando `npm run build`.
 
 ## Ejecutar la aplicación
 Abre el fichero `dist/index.html` en el navegador (con *Live Server*, por ejemplo).

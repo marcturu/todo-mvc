@@ -2,7 +2,7 @@
 
 ## 0. (0,5 puntos) Property 'charAt' does not exist on type 'number' - ts(2339)
 
-![Error ts(2339)](Error_ts(2339).png)  
+![Error ts(2339)](img/Error_ts(2339).png)  
 
 ### Explicación
 Se produce un error porque `c.apple` es un número y `.charAt()` solamente existe en strings.  
