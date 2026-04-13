@@ -1,4 +1,4 @@
-# 3️⃣ PEC2_Ej3: Aplicacion_TODO
+# 3️⃣ PEC2_Ej3 - Aplicacion_TODO
 
 ## Descripción
 Aplicación TODO construida en TypeScript siguiendo la arquitectura *MVC*:
