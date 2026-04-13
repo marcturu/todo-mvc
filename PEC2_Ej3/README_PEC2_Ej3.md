@@ -1,7 +1,7 @@
-## PEC2_Ej3: Aplicacion_TODO
+# 3️⃣ PEC2_Ej3: Aplicacion_TODO
 
 ## Descripción
-Aplicación TODO cnopstruida en TypeScript siguiendo la arquitectura MVC:
+Aplicación TODO construida en TypeScript siguiendo la arquitectura *MVC*:
 - **todo.model.ts**. Define la estructura de datos de una tarea.
 - **todo.service.ts**. Gestiona las operaciones CRUD y la persistencia en *localStorage*.
 - **todo.view.ts**. Controla el renderizado y los eventos del DOM.
@@ -65,7 +65,7 @@ npm run build
 ```
 
 ## Ejecutar la aplicación
-Abre el fichero `dist/idnex.html` en el navegador (con *Live Server*, por ejemplo).
+Abre el fichero `dist/index.html` en el navegador (con *Live Server*, por ejemplo).
 
 ## Scripts disponibles
 | Comando | Descripción |

@@ -13,16 +13,25 @@
 
 ## Decisiones técnicas generales
 
-
 ### Estructura de ramas
 
 Se ha trabajado con ramas Git a pesar de ser un proyecto individual, con el objetivo de mantener un historial limpio y organizado. Los merges se han realizado con `--no-ff` para preservar el commit de merge aunque la rama base no hubiera cambiado.
 
 ## Ejercicios
 
-### PEC2_Ej1 - Primeros códigos
+### 1️⃣ PEC2_Ej1 - Primeros códigos
+Respuestas en [PEC2_Ej1_respuestas_teoria.md](PEC2_Ej1/PEC2_Ej1_respuestas_teoria.md).
 
-### PEC2_Ej2
+### 2️⃣ PEC2_Ej2
+
+#### **Ejecución:**
+```bash
+tsc
+node dist/ejercicio<n>.js
+```
+donde **n** es el número de alguno de los tres ejericios.
+
+---
 
 #### **a) tsconfig.json**
 Nigúna aclaración a destacar.
@@ -67,7 +76,23 @@ En el bucle, por un lado se reutiliza la función `sound()` para las dos subclas
 
 ![Ejecución consola del resultado d](Result_PEC2_Ej2d.png)
 
-### PEC2_Ej3 - Aplicación TODO
+### 3️⃣ PEC2_Ej3 - Aplicación TODO
+
+Guía completa en [README_PEC2_Ej3.md](PEC2_Ej3/README_PEC2_Ej3.md).
+
+#### **Ejecución:** (recomendada con Webpack)
+
+Para desarrollo:
+```bash
+npm run build:dev 
+```
+Para producción:
+```bash
+npm run build
+```
+Abrir el fichero `dist/index.html` en el navegador (con *Live Server*, por ejemplo).
+
+---
 
 En **`todo.service.ts`** se planteó usar:
 ```ts
@@ -114,9 +139,6 @@ get todos(): ITodo[] {
 }
 ```
 Además de substituir las declaraciónes donde aparecía dicho atributo con la nueva convención **'_'**.
-
-### Hotfixes
-Rama dedicada a correcciones menores transversales: variables globales, diseño responsive, comentarios en el código y mejoras de UI.
 
 ---
 
