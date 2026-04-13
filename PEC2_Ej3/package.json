@@ -1,0 +1,21 @@
+{
+  "name": "pec2_ej3-todo-app",
+  "version": "1.0.0",
+  "description": "TODO App using TypeScript, Webpack, and MVC architecture",
+  "main": "dist/bundle.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "build:dev": "webpack --mode development",
+    "tsc": "tsc"
+  },
+  "author": "Marc Turu Roca",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "ts-loader": "^9.5.0",
+    "typescript": "^5.0.0",
+    "webpack": "^5.90.0",
+    "webpack-cli": "^5.1.0"
+  }
+}
