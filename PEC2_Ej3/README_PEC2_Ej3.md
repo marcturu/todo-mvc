@@ -85,11 +85,11 @@ Abre el fichero `dist/index.html` en el navegador (con *Live Server*, por ejempl
 | `npm run tsc` | Transpila todo a tsc |
 
 ## Dependencias de desarrollo (devDependencies)
-| Pauqete | Uso |
+| Paquete | Uso |
 | --- | --- |
 | `typescript` | Compilador de TypeScript |
 | `webpack` | Empaquetador de módulos |
 | `webpack-cli` | CLI de webpack |
 | `ts-loader` | Loader para que webpack procese `.ts` |
 | `html-webpack-plugin` | Genera el `index.html` en `dist/` |
-| `ts-loader` | Copia el `style.css` en `dist/` |
+| `copy-webpack-plugin` | Copia el `style.css` en `dist/` |
