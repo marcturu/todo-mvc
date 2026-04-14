@@ -38,6 +38,7 @@ PEC2_Ej3/
 ## Requisitos previos
 - Node.js 
 - npm v9
+- tsc
 
 ## Instalación de dependencias
 ```bash
