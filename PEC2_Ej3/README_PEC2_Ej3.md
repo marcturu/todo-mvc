@@ -21,7 +21,7 @@ PEC2_Ej3/
 │  │   └─ todo.views.ts  
 │  ├─ index.html  
 │  └─ app.ts  
-├─ dist/              
+├─ dist/                      // Cuando se ejecute el comando
 │  ├─ bundle.js  
 │  ├─ index.html  
 │  └─ style.css  
@@ -32,6 +32,7 @@ PEC2_Ej3/
 ├─ tsconfig.json  
 ├─ webpack.config.js  
 ├─ package.json  
+├─ package-lock.json 
 └─ README_PEC2_Ej3.md  
 ```
 
@@ -52,8 +53,7 @@ Compila los archivos `.ts` a `.js` en la carpeta `dist/`.
 npm run tsc
 ```
 
-> Esta opción no genera el bundle ni copia el HTML ni el CSS.  
-> No es suficiente para ejecutar la aplicación en el navegador.
+> Esta opción no genera el bundle ni copia el HTML ni el CSS.
 
 ## Opción 2 - Compilar con Webpack (reocmendado)
 Webpack transpila todos los archivos TypeScript y genera un único fichero `bundle.js` en `dist/`, donde empaqueta todos los módulos, junto con el `index.html` con el *script defer src="bundle.js"* inyectado automáticamente y el `style.css`.

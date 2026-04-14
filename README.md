@@ -72,7 +72,10 @@ Despúes, simplemente se recorrieron los dos elementos de `myHangar` y se mostra
 
 #### **d) ejercicio3.txt**
 La línea `Animal.population++` en el constructor de la superclase se ejecuta cada vez que se instancia cualquier subclase (`super()` presente en las constructoras de las subclases).  
-En el bucle, por un lado se reutiliza la función `sound()` para las dos subclases, pero por otro lado, se necesita recurrir a un condicional para diferenciar qué función utilizar dependiendo de la tipología de la instancia de Animal (`instanceof`). 
+En el bucle, por un lado se reutiliza la función `sound()` para las dos subclases, pero por otro lado, se necesita recurrir a un condicional para diferenciar qué función utilizar dependiendo de la tipología de la instancia de Animal (`instanceof`).  
+Cambios extras que se podrían haber realizado pero que se optó por no hacerlo debido a que ponía explícitamente *"Sustituye /* * */ por las instrucciones adecuadas que cumplan las operaciones y salidas indicadas en los comentarios."*:
+- Al igual que con `sound()`, haber substituido las funciones `iamadog` e `iamacat` por una con el mismo nombre, por ejemplo: `whoami`, así, en el bucle, no haría falta comprobación de `instanceof`.
+- Añadir el tipado `: void` en las funciones `iamadog` e `iamacat`.  
 
 ![Ejecución consola del resultado d](PEC2_Ej2/img/Result_PEC2_Ej2d.png)
 
@@ -133,7 +136,7 @@ ya que `contentEditable` está definida como `string` en el DOM Typescript.
 
 Como último cambio importante a comentar, todas los callbacks de eventos se tiparon como `event: Event` y se añadió `const target = event.target as HTMLElement;` antes de la comprobación condicional para solucioanr el error *"'event.target' is possibly 'null'"*, ya que su tipo es `EventTarget | null` y TypeScript no puede saber que sea un `HTMLElement` sin esta conversión.
 
-En `todo.controller.ts` surgió el problema de que no se podía acceder al atributo privado `todos`, específicamente en la siguiente línea:
+En **`todo.controller.ts`** surgió el problema de que no se podía acceder al atributo privado `todos`, específicamente en la siguiente línea:
 ```ts
 this.onTodoListChanged(this.service.todos);
 ```
