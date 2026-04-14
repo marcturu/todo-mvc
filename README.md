@@ -148,7 +148,7 @@ get todos(): ITodo[] {
 ```
 Además de substituir las declaraciónes donde aparecía dicho atributo con la nueva convención **'_'**.  
 
-![alt text](PEC2_Ej3/img/index.png)
+![App in index.html](PEC2_Ej3/img/index.png)
 ---
 
 > Marc Turu Roca · Máster Universitario de Desarrollo de Sitios y Aplicaciones Web
