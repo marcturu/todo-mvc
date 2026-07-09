@@ -13,6 +13,18 @@ This project consists of three independent phases: **/1-theoretical-questions**,
 
 ---
 
+## 🛠 Installation & Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/marcturu/todo-mvc.git
+```
+
+### 2. Run locally
+Follow the instructions to run the exercises **/2-typescript-exercises** and **/3-todo-mvc**.
+
+---
+
 ## Exercises
 
 ### 1️⃣ /1-theoretical-questions
@@ -75,7 +87,7 @@ Additional changes that could have been made but were deliberately avoided, sinc
 
 ![Console execution result d](2-typescript-exercises/img/typescript-exercises-exd.png)
 
-### 3️⃣ /todo-mvc
+### 3️⃣ /3-todo-mvc-app
 
 Full guide in **[3-todo-mvc-app/GUIDE.md](3-todo-mvc-app/GUIDE.md)**.
 
