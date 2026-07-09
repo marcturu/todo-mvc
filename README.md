@@ -35,7 +35,7 @@ Answers in **[1-theoretical-questions/ANSWERS.md](1-theoretical-questions/ANSWER
 #### **Execution:**
 ```bash
 tsc
-node dist/ejercicio<n>.js
+node dist/ex<n>.js
 ```
 where **n** is the number of one of the three exercises.
 
