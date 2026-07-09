@@ -58,13 +58,13 @@ printArray(array.reverse());
 ```
 but the goal was to change as little as possible of the code not marked with `/**/`.
 
-![Console execution result b](2-typescript-exercises\img\typescript-exercises-exb.png)
+![Console execution result b](2-typescript-exercises/img/typescript-exercises-exb.png)
 
 #### **c) ex2.ts**
 Here, an *index signature* was created to define the object type used to type the dictionary.  
 Afterwards, the two elements of `myHangar` were simply iterated over and displayed with the structure indicated in the comment.
 
-![Console execution result c](2-typescript-exercises\img\typescript-exercises-exc.png)
+![Console execution result c](2-typescript-exercises/img/typescript-exercises-exc.png)
 
 #### **d) ex3.ts**
 The line `Animal.population++` in the superclass constructor runs every time any subclass is instantiated (since `super()` is present in the subclasses' constructors).  
@@ -73,7 +73,7 @@ Additional changes that could have been made but were deliberately avoided, sinc
 - As with `sound()`, replacing the `iamadog` and `iamacat` functions with a single one sharing the same name, e.g. `whoami`, so that the loop would not need an `instanceof` check.
 - Adding the `: void` type to the `iamadog` and `iamacat` functions.
 
-![Console execution result d](2-typescript-exercises\img\typescript-exercises-exd.png)
+![Console execution result d](2-typescript-exercises/img/typescript-exercises-exd.png)
 
 ### 3️⃣ /todo-mvc
 
@@ -144,4 +144,4 @@ get todos(): ITodo[] {
 ```
 All declarations referencing that attribute were also updated to follow the new **'_'** naming convention.
 
-![App in index.html](3-todo-mvc-app\img\index.png)
+![App in index.html](3-todo-mvc-app/img/index.png)
