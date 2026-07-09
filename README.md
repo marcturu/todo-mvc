@@ -16,7 +16,7 @@ This project consists of three independent phases: **/1-theoretical-questions**,
 ## Exercises
 
 ### 1️⃣ /1-theoretical-questions
-Answers in **[1-theoretical-questions\answers.md](1-theoretical-questions\answers.md)**.
+Answers in **[1-theoretical-questions/answers.md](1-theoretical-questions/answers.md)**.
 
 ### 2️⃣ /2-typescript-exercises
 
