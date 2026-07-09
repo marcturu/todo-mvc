@@ -9,7 +9,7 @@ TODO application built in TypeScript following the *MVC* architecture:
 
 ## Project structure
 ```
-PEC2_Ej3/  
+3-todo-mvc-app/  
 ├─ src/  
 │  ├─ controllers/  
 │  │  └─ todo.controller.ts  
