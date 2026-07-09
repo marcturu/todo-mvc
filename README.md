@@ -8,7 +8,7 @@ This project consists of three independent phases: **/1-theoretical-questions**,
 ## ✅ Features
 
 - **/1-theoretical-questions**: 4 initial questions about TypeScript and its characteristics (errors, types, classes, interfaces).
-- **/2-typescript-exercises**: 3 exercises completed in order to match the expected output (which is are shown in the lines with `//`).
+- **/2-typescript-exercises**: 3 exercises completed in order to match the expected outputs (which are shown in the lines with `//`).
 - **/3-todo-mvc**: MVC web app to replicate a **TODO list**.
 
 ---
