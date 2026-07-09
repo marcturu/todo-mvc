@@ -1,117 +1,113 @@
-# ⚡ PEC 2 - Desarrollo Frontend con Framework JavaScript
+# ☑️ - Todo MVC
 
-![TypeScript](https://img.shields.io/badge/Typescript-TS-3178C6)  
-<sub>🗓️ Desarrollado en abril del 2026</sub>
+![TypeScript](https://img.shields.io/badge/Typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=black)  
+<sub>🗓️ Developed in April 2026</sub>
 
-| Campo | Valor |
-|---|---|
-| **Login UOC** | mturur |
-| **Nombre** | Marc Turu Roca |
-| **Máster** | Desarrollo de Sitios y Aplicaciones Web |
+This project consists of three independent phases: **/1-theoretical-questions**, **/2-typescript-exercises** and **/3-todo-mvc**.
 
---- 
+## ✅ Features
 
-## Decisiones técnicas generales
+- **/1-theoretical-questions**: 4 initial questions about TypeScript and its characteristics (errors, types, classes, interfaces).
+- **/2-typescript-exercises**: 3 exercises completed in order to match the expected output.
+- **/3-todo-mvc**: MVC web app to replicate a **TODO list**.
 
-### Estructura de ramas
+---
 
-Se ha trabajado con ramas Git a pesar de ser un proyecto individual, con el objetivo de mantener un historial limpio y organizado. Los merges se han realizado con `--no-ff` para preservar el commit de merge aunque la rama base no hubiera cambiado.
+## Exercises
 
-## Ejercicios
+### 1️⃣ /1-theoretical-questions
+Answers in **[1-theoretical-questions\answers.md](1-theoretical-questions\answers.md)**.
 
-### 1️⃣ PEC2_Ej1 - Primeros códigos
-Respuestas en [PEC2_Ej1_respuestas_teoria.md](PEC2_Ej1/PEC2_Ej1_respuestas_teoria.md).
+### 2️⃣ /2-typescript-exercises
 
-### 2️⃣ PEC2_Ej2
-
-#### **Ejecución:**
+#### **Execution:**
 ```bash
 tsc
 node dist/ejercicio<n>.js
 ```
-donde **n** es el número de alguno de los tres ejericios.
+where **n** is the number of one of the three exercises.
 
 ---
 
 #### **a) tsconfig.json**
-Nigúna aclaración a destacar.
+No particular remarks.
 
-#### **b) ejercicio1.txt**
-En esta parte:
+#### **b) ex1.ts**
+In this part:
 ```ts
 let array:number[]=[2,3,4];
 console.log(array.shift()); //2
 printArray(array); // 3,4
 ```
-debido a que se espera `3` y `4` solamente después, no se puede hacer 
+since only `3` and `4` are expected afterwards, it is not possible to do
 ```ts
 console.log(array[0]); //2
 ```
-, ya que no se eliminaría el `2`. 
+as this would not remove the `2`.
 
-Aquí:
+Here:
 ```ts
 console.log(array.sort().join(',')); //1,3,4,8
 console.log(array.reverse().join(',')); //8,4,3,1
 ```
-se añadieron los `.join(',')` (aparte del `reverse()` que faltaba) para que las salidas coincidieran, ya que `console.log()` imprime los arrays diferentes.  
-También se podría haber hecho:
+the `.join(',')` calls were added (besides the missing `reverse()`) so the outputs would match, since `console.log()` prints arrays differently.  
+An alternative would have been:
 ```ts
 printArray(array.sort());
 printArray(array.reverse());
 ```
-pero se quiso cambiar lo mínimo posible el código no indicado con /**/.
+but the goal was to change as little as possible of the code not marked with `/**/`.
 
-![Ejecución consola del resultado b](PEC2_Ej2/img/Result_PEC2_Ej2b.png)
+![Console execution result b](2-typescript-exercises\img\typescript-exercises-exb.png)
 
-#### **c) ejercicio2.txt**
-Aquí, se decidió crear un *index signature* para definir el tipo de objeto para tipar el diccionario.  
-Despúes, simplemente se recorrieron los dos elementos de `myHangar` y se mostraron con la estructura indicada en el comentario.
+#### **c) ex2.ts**
+Here, an *index signature* was created to define the object type used to type the dictionary.  
+Afterwards, the two elements of `myHangar` were simply iterated over and displayed with the structure indicated in the comment.
 
-![Ejecución consola del resultado c](PEC2_Ej2/img/Result_PEC2_Ej2c.png)
+![Console execution result c](2-typescript-exercises\img\typescript-exercises-exc.png)
 
-#### **d) ejercicio3.txt**
-La línea `Animal.population++` en el constructor de la superclase se ejecuta cada vez que se instancia cualquier subclase (`super()` presente en las constructoras de las subclases).  
-En el bucle, por un lado se reutiliza la función `sound()` para las dos subclases, pero por otro lado, se necesita recurrir a un condicional para diferenciar qué función utilizar dependiendo de la tipología de la instancia de Animal (`instanceof`).  
-Cambios extras que se podrían haber realizado pero que se optó por no hacerlo debido a que ponía explícitamente *"Sustituye /* * */ por las instrucciones adecuadas que cumplan las operaciones y salidas indicadas en los comentarios."*:
-- Al igual que con `sound()`, haber substituido las funciones `iamadog` e `iamacat` por una con el mismo nombre, por ejemplo: `whoami`, así, en el bucle, no haría falta comprobación de `instanceof`.
-- Añadir el tipado `: void` en las funciones `iamadog` e `iamacat`.  
+#### **d) ex3.ts**
+The line `Animal.population++` in the superclass constructor runs every time any subclass is instantiated (since `super()` is present in the subclasses' constructors).  
+In the loop, the `sound()` function is reused for both subclasses, but on the other hand, a conditional is needed to determine which function to use depending on the type of the `Animal` instance (`instanceof`).  
+Additional changes that could have been made but were deliberately avoided, since the instructions explicitly stated *"Replace /* * */ with the appropriate instructions that fulfill the operations and outputs indicated in the comments"*:
+- As with `sound()`, replacing the `iamadog` and `iamacat` functions with a single one sharing the same name, e.g. `whoami`, so that the loop would not need an `instanceof` check.
+- Adding the `: void` type to the `iamadog` and `iamacat` functions.
 
-![Ejecución consola del resultado d](PEC2_Ej2/img/Result_PEC2_Ej2d.png)
+![Console execution result d](2-typescript-exercises\img\typescript-exercises-exd.png)
 
-### 3️⃣ PEC2_Ej3 - Aplicación TODO
+### 3️⃣ /todo-mvc
 
-Guía completa en [README_PEC2_Ej3.md](PEC2_Ej3/README_PEC2_Ej3.md).
+Full guide in **[3-todo-mvc-app/todo-mvc-app-guide.md](3-todo-mvc-app/todo-mvc-app-guide.md)**.
 
-#### **Ejecución:** (recomendada con Webpack)
+#### **Execution:** (Webpack recommended)
 
-Instalar dependencias:
+Install dependencies:
 ```bash
 npm install
 ```
 
-Para desarrollo:
+For development:
 ```bash
 npm run build:dev 
 ```
-Para producción:
+For production:
 ```bash
 npm run build
 ```
-Abrir el fichero `dist/index.html` en el navegador (con *Live Server*, por ejemplo).
+Open the `dist/index.html` file in the browser (with *Live Server*, for example).
 
 ---
 
-En **`todo.service.ts`** se planteó usar:
+In **`todo.service.ts`**, using the following was initially considered:
 ```ts
 export interface ITodoService {
   todos: ITodo[];
   onTodoListChanged: (todos: ITodo[]) => void;
 }
 ```
-pero debido a que en la clase `TodoService` las propiedades eran `private`, había incosnsistencia en la declaraicón de la interfaz y la clase, por lo que se optó por renunciar al uso de esta primera.
+but since the properties in the `TodoService` class were `private`, there was an inconsistency between the interface declaration and the class, so this approach was dropped.
 
-En la siguiente función (ya adaptada) de **`todo.views.ts`**:
+In the following (already adapted) function from **`todo.views.ts`**:
 ```ts
 getElement(selector: string): HTMLElement {
   const element = document.querySelector<HTMLElement>(selector);
@@ -119,36 +115,33 @@ getElement(selector: string): HTMLElement {
   return element;
 }
 ```
-se usó `HTMLElement` en el `querySelector` para indicar a TypeScript el tipo esperado del elemento seleccionado, permitiendo acceder a sus propiedades. Además se añadió la comprobación condicional porque `querySelector` puede devolver `null`, valor no compatible con el tipo de retorno de `HTMLElement`.
+`HTMLElement` was used in `querySelector` to tell TypeScript the expected type of the selected element, allowing access to its properties. A conditional check was also added because `querySelector` can return `null`, a value incompatible with the `HTMLElement` return type.
 
-En la función `displayTodos(todos: ITodo[]): void` de **`todo.views.ts`**, para solucionar el error *"Property 'type' does not exist on type 'HTMLElement'"* que aparecía en las siguientes líneas (sin adaptar aún):
+In the `displayTodos(todos: ITodo[]): void` function in **`todo.views.ts`**, to fix the error *"Property 'type' does not exist on type 'HTMLElement'"* that appeared on the following (not yet adapted) lines:
 ```ts
 const checkbox = this.createElement("input");
   checkbox.type = "checkbox";
   checkbox.checked = todo.complete;
 ```
-se agregó `as HTMLInputElement` porque `createElement` devuelve un `HTMLElement`, que no incluye propiedades específicas como `type` y `checked` propias de `HTMLInputElement`.    
-También se transformó a `'true'` la línea:
+`as HTMLInputElement` was added because `createElement` returns an `HTMLElement`, which does not include specific properties such as `type` and `checked` that belong to `HTMLInputElement`.  
+The following line was also converted to `'true'`:
 ```ts
 span.contentEditable = true;
 ```
-ya que `contentEditable` está definida como `string` en el DOM Typescript.
+since `contentEditable` is defined as `string` in the DOM TypeScript typings.
 
-Como último cambio importante a comentar, todas los callbacks de eventos se tiparon como `event: Event` y se añadió `const target = event.target as HTMLElement;` antes de la comprobación condicional para solucioanr el error *"'event.target' is possibly 'null'"*, ya que su tipo es `EventTarget | null` y TypeScript no puede saber que sea un `HTMLElement` sin esta conversión.
+As a final notable change, all event callbacks were typed as `event: Event`, and `const target = event.target as HTMLElement;` was added before the conditional check to fix the error *"'event.target' is possibly 'null'"*, since its type is `EventTarget | null` and TypeScript cannot infer it is an `HTMLElement` without this conversion.
 
-En **`todo.controller.ts`** surgió el problema de que no se podía acceder al atributo privado `todos`, específicamente en la siguiente línea:
+In **`todo.controller.ts`**, an issue arose where the private `todos` attribute could not be accessed, specifically on the following line:
 ```ts
 this.onTodoListChanged(this.service.todos);
 ```
-debido a que, como se comentó al principio, en la clase `TodoService` las propiedades eran `private`. Para solucionarlo, se renombró el atributo de esa clase como `_todos` y se creó un *getter* para poder acceder a dicho atributo:
+because, as mentioned earlier, the properties in the `TodoService` class were `private`. To solve this, the attribute in that class was renamed to `_todos` and a *getter* was created to access it:
 ```ts
 get todos(): ITodo[] {
   return [...this._todos];
 }
 ```
-Además de substituir las declaraciónes donde aparecía dicho atributo con la nueva convención **'_'**.  
+All declarations referencing that attribute were also updated to follow the new **'_'** naming convention.
 
-![App in index.html](PEC2_Ej3/img/index.png)
----
-
-> Marc Turu Roca · Máster Universitario de Desarrollo de Sitios y Aplicaciones Web
+![App in index.html](3-todo-mvc-app\img\index.png)
