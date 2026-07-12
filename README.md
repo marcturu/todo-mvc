@@ -25,7 +25,7 @@ Follow the instructions to run the exercises **/2-typescript-exercises** and **/
 
 ---
 
-## Exercises
+## 🎯 Exercises
 
 ### 1️⃣ /1-theoretical-questions
 Answers in **[1-theoretical-questions/ANSWERS.md](1-theoretical-questions/ANSWERS.md)**.
