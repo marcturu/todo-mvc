@@ -21,7 +21,7 @@ git clone https://github.com/marcturu/todo-mvc.git
 ```
 
 ### 2. Run locally
-Follow the instructions to run the exercises **/2-typescript-exercises** and **/3-todo-mvc**.
+Follow the instructions from section [Exercises](#🎯-Exercises) to run the exercises **/2-typescript-exercises** and **/3-todo-mvc**.  
 
 ---
 
