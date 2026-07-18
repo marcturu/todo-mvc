@@ -43,6 +43,7 @@ TODO application built in TypeScript following the *MVC* architecture:
 
 ## Installing dependencies
 ```bash
+cd 3-todo-mvc-app
 npm install
 ```
 
