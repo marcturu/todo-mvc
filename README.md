@@ -96,6 +96,7 @@ Full guide in **[3-todo-mvc-app/GUIDE.md](3-todo-mvc-app/GUIDE.md)**.
 
 Install dependencies:
 ```bash
+cd 3-todo-mvc-app
 npm install
 ```
 
