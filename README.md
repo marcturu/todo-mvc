@@ -34,7 +34,7 @@ Answers in **[1-theoretical-questions/ANSWERS.md](1-theoretical-questions/ANSWER
 
 #### **Execution:**
 ```bash
-cd 2-typescript-exercises/
+cd 2-typescript-exercises
 tsc
 node dist/ex<n>.js
 ```
