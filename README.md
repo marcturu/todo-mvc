@@ -1,4 +1,4 @@
-# ☑️ - Todo MVC
+# <img src="todo-icon.png" alt="TodoIcon" width="150"/> - Todo MVC
 
 ![TypeScript](https://img.shields.io/badge/Typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=black)  
 <sub>🗓️ Developed in April 2026</sub>
