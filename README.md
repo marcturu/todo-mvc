@@ -1,4 +1,4 @@
-# <img src="todo-icon.png" alt="TodoIcon" width="150"/> - Todo MVC
+# <img src="todo-icon.png" alt="TodoIcon" width="150"/> - TypeScript MVC architecture with type inference, generics, strict OOP and Webpack bundling
 
 ![TypeScript](https://img.shields.io/badge/Typescript-3178C6?style=for-the-badge&logo=typescript&logoColor=black)  
 <sub>🗓️ Developed in April 2026</sub>
